@@ -15,7 +15,7 @@
             transform: translate(-50%, -50%);
         }
      .button {
-            transform: translateY(-10px);
+            width: 140px;
      }
      /* .submit:hover {
         display: none
@@ -23,14 +23,39 @@
      .search:hover:before {
         content: "Finding..."
       }
-      .contain {
-        --w:400px;
-        --n:3;
-        display:column;
-        gap:10px;
-      }
-      .contain > div {
-        height:100px;
-      }
-     
+    
+     }
+
+    .center-container{
+      background:white;
+      height: "100%";
+      box-shadow: 0 0px 0px rgb(0 0 0 / 0.2);
+      padding: 40px;
+      margin-bottom: 10px;
+      border-radius: 10px;
     }
+    
+    .container-gradient{
+      background: linear-gradient(#FFFFFF, #97F3FF,#A2F660,#F75353);
+      height: "100%";
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      padding: 40px;
+      margin-bottom: 10px;
+    }
+
+  .centred-results{
+    position: absolute;
+    top: 25%;
+    left: 23%;   
+    right: 23%;
+}
+
+ .contractNameStyling{
+   margin-left: -230px;
+ }
+
+ 
+
+    
+
+     

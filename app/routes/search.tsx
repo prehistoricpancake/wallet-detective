@@ -1,6 +1,7 @@
 import type { DataFunctionArgs } from "@remix-run/server-runtime";
 import { useLoaderData } from "remix";
 import getAccountTokens from "~/data/getAccountTokens.server";
+import { ResultCardToken, ResultCardAddress} from "../components/SearchResultCards"
 
 type LoaderData = Awaited<ReturnType<typeof loader>>;
 
@@ -17,6 +18,7 @@ export let loader = async ({ request }: DataFunctionArgs) => {
 
   return { address, tokens };
 };
+
 
 
 
@@ -42,94 +44,64 @@ export default function Index() {
 
   return (
     <>
-      <h1 className="text-grey-darkest pt-4 pl-4">
-        Wallets Detective &#128021;
+     <h1 className="text-grey-darkest pt-4 pl-4">Wallets Detective &#128021;</h1>
+
+     <div className="centred-results">
+
+     <h1 className="text-dark-gray font-medium pt-4 pl-4 mb-5">
+          Overview
       </h1>
 
-      <div className="container mx-auto px-96 pt-25">
-        <p className="text-dark-gray text-sm font-semibold text-left mb-4">
-          {" "}
-          Overview
-        </p>
+      {/* Wallet Address/query typed by user */}
+      <ResultCardAddress address={loaderData.address} />
 
-        <div className="bg-white border-dark-gray rounded shadow-lg p-8 mt-2 max-w-full">
-          <p className="text-gray-400 text-sm mb-2 font-medium"> Address</p>
-          <p>{loaderData.address}</p>
-        </div>
-
-        <ul>
-          {loaderData.tokens.map((token) =>
+     {/* Tokens that don't support erc-20 */}
+      <ul>
+          {loaderData.tokens.map((token) => (
             !token.supportsErc ? (
-              <>
                 <li key={token.contractTickerSymbol}>
-                  <div className="bg-white border-dark-gray rounded shadow-lg p-8 mt-2 max-w-full">
-                    <div className="grid grid-cols-3 pl-0 flex-none">
-                      <img
-                        src={token.logoUrl}
-                        className="flex1 w-14 h-14 p-1 border-white rounded-full"
-                        alt="token logo"
-                      />
-                      <div className="flex-1">
-                        <p>
-                          <span className="text-black text-sm mb-2 font-medium">
-                            {token.contractName}
-                          </span>
-                          <span className="text-dark-gray">
-                            ({token.contractTickerSymbol})
-                          </span>
-                        </p>
-
-                        <p className="pr-1.5 text-dark-gray">
-                          Balance: {token.formattedBalance}{" "}
-                        </p>
-                      </div>
-                      <div className="pl-28 flex-1">
-                      {/* uma surpresa especial */}
-                     <a href="https://shorturl.at/jxU14"><p className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-light-gray duration-300 p-2">Token page ↗︎</p></a>
-
-                      </div>
-                    </div>
-                  </div>
+                  <ResultCardToken 
+                  logoUrl={token.logoUrl} 
+                  contractSymbol={token.contractTickerSymbol}
+                  balance={token.formattedBalance}
+                  name={token.contractName}
+                  specialSurprise="https://shorturl.at/jxU14"
+                  />
                 </li>
-                <p className="text-dark-gray text-sm font-medium text-left mt-8 mb-4">
+                ) : ''
+          )
 
-                ERC-20 TOKENS</p>
-              </>
-            ) : (
-              <li key={token.contractTickerSymbol}>
-                <div className="bg-white border-dark-gray rounded shadow-lg p-8 mt-2 max-w-full">
-                  <div className="grid grid-cols-3 pl-0 flex-none">
-                    <img
-                      src={token.logoUrl}
-                      className="flex1 w-14 h-14 p-1 border-white rounded-full"
-                      alt="token logo"
-                    />
-                    <div className="flex-1">
-                      <p>
-                        <span className="text-black text-sm mb-2 font-medium">
-                          {token.contractName}
-                        </span>
-                        <span className="text-dark-gray">
-                          ({token.contractTickerSymbol})
-                        </span>
-                      </p>
+         )}
+            
+          </ul>
 
-                      <p className="pr-1.5 text-dark-gray">
-                        Balance: {token.formattedBalance}{" "}
-                      </p>
-                    </div>
-                    <div className="pl-28 flex-1">
-                    {/* uma surpresa especial */}
-                    <a href="https://shorturl.at/jxU14"><p className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-light-gray duration-300 p-2">Token page ↗︎</p></a>
+              <h1 className="text-dark-gray text-sm font-medium text-left mt-8 mb-4">ERC-20 Tokens</h1>
 
-                    </div>
-                  </div>
-                </div>
-              </li>
-            )
+          <ul>
+          {loaderData.tokens.map((token) => (
+            token.supportsErc ? (
+                <li key={token.contractTickerSymbol}>
+                  <ResultCardToken 
+                  logoUrl={token.logoUrl} 
+                  contractSymbol={token.contractTickerSymbol}
+                  balance={token.formattedBalance}
+                  name={token.contractName}
+                  specialSurprise="https://shorturl.at/jxU14"
+                  />
+                </li>
+                ) : ''
+          )
+
+
           )}
-        </ul>
-      </div>
-    </>
+            
+          </ul>
+</div>
+
+               
+</>
+       
+            
   );
 }
+
