@@ -20,7 +20,7 @@ export let loader = async ({ request }: DataFunctionArgs) => {
 
 
 
-export default function Index() {
+export default function Search() {
   const loaderData = useLoaderData<LoaderData>();
 
   if (!loaderData) {
