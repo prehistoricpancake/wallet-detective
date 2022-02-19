@@ -2,6 +2,9 @@
 
 
 How many tokens have you? 
-Don't know? No woories!
-Wallet Detective comes to the rescue 🦸‍♀️🐕
+<br />
+Don't know? No worries!
+<br />
+
+Wallet Detective to the rescue 🦸‍♀️🐕
 
