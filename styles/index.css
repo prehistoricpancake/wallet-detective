@@ -23,5 +23,14 @@
      .search:hover:before {
         content: "Finding..."
       }
+      .contain {
+        --w:400px;
+        --n:3;
+        display:column;
+        gap:10px;
+      }
+      .contain > div {
+        height:100px;
+      }
      
     }

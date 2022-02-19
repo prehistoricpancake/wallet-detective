@@ -14,6 +14,8 @@ export default function Index() {
 
   return (
     <div className="container mx-auto px-4 pt-24">
+          {/* // <div className="contain"> */}
+
       <h1 className="mb-10 text-center text-lg text-black font-medium">
         Wallets Detective &#128021;
       </h1>
@@ -32,7 +34,7 @@ export default function Index() {
               />
               <button
                 type="submit"
-                className="bg-black h-12 text-white rounded-lg md:w-full search"
+                className="bg-black h-12 px-3 text-white rounded-lg md:w-full search"
               >
                 {text}
               </button>

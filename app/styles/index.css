@@ -449,6 +449,17 @@ body{
   content: "Finding..."
 }
 
+.contain {
+  --w:400px;
+  --n:3;
+  display:column;
+  gap:10px;
+}
+
+.contain > div {
+  height:100px;
+}
+
 *, ::before, ::after{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
