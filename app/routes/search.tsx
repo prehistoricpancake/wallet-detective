@@ -19,10 +19,28 @@ export let loader = async ({ request }: DataFunctionArgs) => {
   return { address, tokens };
 };
 
+ 
 
 
 export default function Search() {
   const loaderData = useLoaderData<LoaderData>();
+
+  const getAllERCTokens = () => {
+    let count = 0;
+    const length = loaderData?.tokens.length;
+    for (let i= 0; i < length!; i++){
+      let count = 0;
+      loaderData?.tokens.map((token) => {
+        if(token.supportsErc){
+          count ++
+        }
+      })
+return count;
+    }
+  }
+
+  console.log(getAllERCTokens())
+  
 
   if (!loaderData) {
     return (
@@ -74,7 +92,7 @@ export default function Search() {
             
           </ul>
 
-              <h1 className="text-dark-gray text-sm font-medium text-left mt-8 mb-4">ERC-20 Tokens</h1>
+              <h1 className="text-dark-gray text-sm font-medium text-left mt-8 mb-4">ERC-20 Tokens ({getAllERCTokens()})</h1>
 
           <ul>
           {loaderData.tokens.map((token) => (
