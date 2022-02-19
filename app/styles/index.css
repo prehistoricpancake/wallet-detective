@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -446,7 +446,7 @@ body{
       } */
 
 .search:hover:before {
-  content: "Finding..."
+  content: "Finding...";
 }
 
 *, ::before, ::after{
@@ -565,10 +565,6 @@ body{
   margin-bottom: 1rem;
 }
 
-.block{
-  display: block;
-}
-
 .flex{
   display: flex;
 }
@@ -639,11 +635,6 @@ body{
   background-color: rgb(41 40 48 / var(--tw-bg-opacity));
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-light-gray{
   --tw-bg-opacity: 1;
   background-color: rgb(240 241 244 / var(--tw-bg-opacity));
@@ -655,10 +646,6 @@ body{
 
 .p-2{
   padding: 0.5rem;
-}
-
-.p-8{
-  padding: 2rem;
 }
 
 .px-3{
@@ -740,12 +727,6 @@ body{
   color: rgb(109 107 118 / var(--tw-text-opacity));
 }
 
-.shadow-lg{
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .transition{
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -766,8 +747,8 @@ body{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.center-container{
-  background:white;
+.center-container {
+  background: white;
   height: "100%";
   box-shadow: 0 0px 0px rgb(0 0 0 / 0.2);
   padding: 40px;
@@ -775,22 +756,22 @@ body{
   border-radius: 10px;
 }
 
-.container-gradient{
-  background: linear-gradient(#FFFFFF, #97F3FF,#A2F660,#F75353);
+.container-gradient {
+  background: linear-gradient(#ffffff, #97f3ff, #a2f660, #f75353);
   height: "100%";
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 40px;
   margin-bottom: 10px;
 }
 
-.centred-results{
+.centred-results {
   position: absolute;
   top: 25%;
   left: 23%;
   right: 23%;
 }
 
-.contractNameStyling{
+.contractNameStyling {
   margin-left: -230px;
 }
 
@@ -820,9 +801,3 @@ body{
     width: 100%;
   }
 }
-
- 
-
-    
-
-     

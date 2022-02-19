@@ -1,61 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body{
-      @apply bg-light-gray;
-    }
-    .card {
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-     .button {
-            width: 140px;
-     }
-     /* .submit:hover {
+  body {
+    @apply bg-light-gray;
+  }
+  .card {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .button {
+    width: 140px;
+  }
+  /* .submit:hover {
         display: none
       } */
-     .search:hover:before {
-        content: "Finding..."
-      }
-    
-     }
-
-    .center-container{
-      background:white;
-      height: "100%";
-      box-shadow: 0 0px 0px rgb(0 0 0 / 0.2);
-      padding: 40px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-    }
-    
-    .container-gradient{
-      background: linear-gradient(#FFFFFF, #97F3FF,#A2F660,#F75353);
-      height: "100%";
-      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-      padding: 40px;
-      margin-bottom: 10px;
-    }
-
-  .centred-results{
-    position: absolute;
-    top: 25%;
-    left: 23%;   
-    right: 23%;
+  .search:hover:before {
+    content: "Finding...";
+  }
 }
 
- .contractNameStyling{
-   margin-left: -230px;
- }
+.center-container {
+  background: white;
+  height: "100%";
+  box-shadow: 0 0px 0px rgb(0 0 0 / 0.2);
+  padding: 40px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
 
- 
+.container-gradient {
+  background: linear-gradient(#ffffff, #97f3ff, #a2f660, #f75353);
+  height: "100%";
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 40px;
+  margin-bottom: 10px;
+}
 
-    
+.centred-results {
+  position: absolute;
+  top: 25%;
+  left: 23%;
+  right: 23%;
+}
 
-     
+.contractNameStyling {
+  margin-left: -230px;
+}
