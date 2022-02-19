@@ -10,7 +10,7 @@ type TokenCardProps = {
   balance: BigNumber;
   name: string;
   contractSymbol: string;
-  specialSurprise: string;
+  tokenPage: string;
 };
 
 export const ResultCardAddress = (props: AddressCardProps) => {
@@ -38,7 +38,7 @@ export const ResultCardToken = (props: TokenCardProps) => {
           />
         </div>
 
-        <div className="lg:ml-15 md:ml-0 sm-ml-0">
+        <div className="xl:ml-15 lg:ml-15 md:ml-15 sm-ml-0">
           <p>
             <span className="text-black text-sm mb-2 font-medium">
               {props.name}
@@ -47,9 +47,9 @@ export const ResultCardToken = (props: TokenCardProps) => {
           </p>
           <p className="text-dark-gray">Balance: {props.balance} </p>
         </div>
-        <button className="lg:pl-28 md:pl-2 sm:pl-0">
-          {/* uma surpresa especial -*/}
-          <a href={props.specialSurprise}>
+        <button className="xl:pl-28 lg:pl-28 md:pl-28 sm:pl-0">
+          {/* a vida é boa */}
+          <a href={props.tokenPage}>
             <p className="text-dark-gray transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-light-gray duration-300 p-2 button">
               Token page ↗︎
             </p>

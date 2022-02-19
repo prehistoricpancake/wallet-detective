@@ -78,7 +78,7 @@ export default function Search() {
                   contractSymbol={token.contractTickerSymbol}
                   balance={token.formattedBalance}
                   name={token.contractName}
-                  specialSurprise="https://shorturl.at/jxU14"
+                  tokenPage="https://shorturl.at/jxU14"
                 />
               </li>
             ) : (
@@ -100,7 +100,7 @@ export default function Search() {
                   contractSymbol={token.contractTickerSymbol}
                   balance={token.formattedBalance}
                   name={token.contractName}
-                  specialSurprise="https://shorturl.at/jxU14"
+                  tokenPage="https://shorturl.at/jxU14"
                 />
               </li>
             ) : (
