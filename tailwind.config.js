@@ -31,6 +31,9 @@ module.exports = {
         '22':'100px',
         '23':'200px',
        },
+       margin:{
+         '15': "-230px"
+       }
     },
   },
   variants: {},
