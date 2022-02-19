@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body{
+      @apply bg-light-gray;
+    }
+    .card {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+     .button {
+            transform: translateY(-10px);
+     }
+     /* .submit:hover {
+        display: none
+      } */
+     .search:hover:before {
+        content: "Finding..."
+      }
+     
+    }
