@@ -3,3 +3,6 @@ node_modules
 /netlify/functions/server/index.js
 /public/build
 /.netlify
+.env
+/build
+/app/styles.css
