@@ -445,7 +445,7 @@ body{
         display: none
       } */
 
-.search:hover:before {
+.search:active {
   content: "Finding...";
 }
 

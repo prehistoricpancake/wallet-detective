@@ -1,16 +1,18 @@
-import { useTransition } from "remix";
-import Button from "../components/Button";
+// import { useTransition } from "remix";
+import { SubmitButton } from "../components/Button";
 import Container from "../components/ContentContainer";
 
 export default function Index() {
-  const transition = useTransition();
+  // useTransition not working as expected need to find out why
 
-  const text =
-    transition.state === "submitting"
-      ? "Finding..."
-      : transition.state === "loading"
-      ? "Finding..."
-      : "Find It";
+  // const transition = useTransition();
+
+  // const text =
+  //   transition.state === "submitting"
+  //     ? "Finding..."
+  //     : transition.state === "loading"
+  //     ? "Finding..."
+  //     : "Find It";
 
   return (
     <div className="container mx-auto px-4 pt-24">
@@ -25,11 +27,11 @@ export default function Index() {
           </label>
           <form className="address" method="get" action="/search">
             <input
-              className="bg-light-gray rounded mt-4 py-2 px-3 text-black leading-tight mb-7 focus:outline-none focus:shadow-outline md:w-full"
+              className="bg-light-gray rounded mt-4 py-2 px-3 text-black leading-tight mb-7 focus:outline-none focus:shadow-outline lg:w-full md:w-full xs:wd-full"
               type="text"
               name="term"
             />
-            <Button text={text} />
+            <SubmitButton  />
           </form>
         </Container>
       </div>

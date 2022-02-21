@@ -16,7 +16,7 @@ type TokenCardProps = {
 export const ResultCardAddress = (props: AddressCardProps) => {
   return (
     <Container>
-      <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 flex-none">
+      <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1">
         <p> Address</p>
         <div className="flex-1">
           <p className="text-dark-gray">{props.address}</p>

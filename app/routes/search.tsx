@@ -1,4 +1,5 @@
 import type { DataFunctionArgs } from "@remix-run/server-runtime";
+import { PageNotFound } from "~/components/PageNotFound";
 import { useLoaderData } from "remix";
 import getAccountTokens from "~/data/getAccountTokens.server";
 import {
@@ -41,26 +42,17 @@ export default function Search() {
 
   if (!loaderData) {
     return (
-      <main>
-        <div className="card">
-          <h1 className="mb-8 text-xl font-bold">
-            404: No tokens found but you have found Ulalume:
-          </h1>
-          <h1 className="mb-8 text-xl font-bold">
-            And I said: "What is written, sweet sister, On the door of this
-            legended tomb?" She replied: "Ulalume -Ulalume— 'Tis the vault of
-            thy lost Ulalume!"{" "}
-          </h1>
-        </div>
-      </main>
+     <PageNotFound />
     );
   }
 
   return (
     <>
-      <h1 className="text-grey-darkest pt-4 pl-4">
+      <a href="https://wallet-detective.netlify.app">
+         <h1 className="text-grey-darkest pt-4 pl-4">
         Wallets Detective &#128021;
       </h1>
+         </a>
 
       <div className="centred-results">
         <h1 className="text-dark-gray font-medium pt-4 pl-4 mb-5">Overview</h1>

@@ -8,6 +8,7 @@
   body {
     @apply bg-light-gray;
   }
+
   .card {
     position: fixed;
     left: 50%;
@@ -20,9 +21,6 @@
   /* .submit:hover {
         display: none
       } */
-  .search:hover:before {
-    content: "Finding...";
-  }
 }
 
 .center-container {
@@ -49,6 +47,7 @@
   right: 23%;
 }
 
-.contractNameStyling {
-  margin-left: -230px;
-}
+
+
+
+
